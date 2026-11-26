@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Little Universe 💖</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div id="stars"></div>
+
+<!-- INTRO -->
+<section id="intro" class="screen active">
+  <div class="content">
+    <div class="moon">🌙</div>
+    <p class="small">A SECRET WORLD IS WAITING</p>
+    <h1>Somewhere<br>Beyond The Stars</h1>
+    <p>A little universe has been created for someone special...</p>
+    <button onclick="enterUniverse()">Enter My Universe ✨</button>
+  </div>
+</section>
+
+<!-- HOME -->
+<section id="home" class="screen">
+  <div class="content">
+    <p class="small">WELCOME TO YOUR LITTLE WORLD</p>
+    <h1>Hermione 💖</h1>
+    <p>In a universe full of stars, some shine differently.</p>
+
+    <div class="planets">
+      <button class="planet" onclick="planet(0)">🌸</button>
+      <button class="planet" onclick="planet(1)">🪐</button>
+      <button class="planet" onclick="planet(2)">🌙</button>
+    </div>
+
+    <p class="hint">Explore these little planets...</p>
+    <button onclick="show('secrets')">Discover Secret Stars ⭐</button>
+  </div>
+</section>
+
+<!-- PLANET MESSAGE -->
+<div id="planetModal" class="modal">
+  <div class="modal-box">
+    <button class="close" onclick="closeModal()">×</button>
+    <div id="planetEmoji">🌸</div>
+    <h2 id="planetTitle"></h2>
+    <p id="planetMessage"></p>
+    <button onclick="closeModal()">Continue ✨</button>
+  </div>
+</div>
+
+<!-- SECRET STARS -->
+<section id="secrets" class="screen">
+  <div class="content">
+    <p class="small">HIDDEN IN THE GALAXY</p>
+    <h1>Secret Stars ⭐</h1>
+    <p>Every star holds a little secret. Discover them all!</p>
+
+    <div class="star-grid">
+      <button onclick="reveal(this,0)">✦</button>
+      <button onclick="reveal(this,1)">✦</button>
+      <button onclick="reveal(this,2)">✦</button>
+      <button onclick="reveal(this,3)">✦</button>
+    </div>
+
+    <p id="starMessage">Your surprises are waiting...</p>
+    <button onclick="show('twist')">One Last Mystery 👀</button>
+  </div>
+</section>
+
+<!-- PLOT TWIST -->
+<section id="twist" class="screen">
+  <div class="content">
+    <div class="magic">🔮</div>
+    <p class="small">A LITTLE MAGIC IS LEFT</p>
+    <h1>Wait... There's More!</h1>
+    <p>You explored the universe. You found its secrets. But did you find the real magic?</p>
+
+    <button onclick="twist()">Reveal The Secret 💫</button>
+
+    <div id="twistMessage" class="hidden">
+      <h2>The Real Magic Is You 💖</h2>
+      <p>This entire universe was created for one special person.</p>
+      <p>And that person is YOU, Hermione!</p>
+      <button onclick="show('final')">Open Your Final Surprise 🥹</button>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL LETTER -->
+<section id="final" class="screen">
+  <div class="letter">
+    <div class="heart">💗</div>
+    <p class="small">A MESSAGE FROM YOUR HARRY POTTER ⚡</p>
+    <h1>Dear Hermione,</h1>
+
+    <p>
+      Some people enter our lives and make ordinary moments feel special.
+
+      <br><br>
+
+      I don't know how to explain it perfectly,
+      but I'm genuinely glad that our paths crossed.
+
+      <br><br>
+
+      This little universe might be made of code,
+      stars and magic, but the feelings behind it are real.
+
+      <br><br>
+
+      I hope you keep smiling, chasing your dreams
+      and being the wonderful person you are.
+
+      <br><br>
+
+      And whenever life gets a little difficult,
+      remember that you deserve kindness,
+      happiness and beautiful moments too.
+
+      <br><br>
+
+      Thank you for being part of my story. 💖
+    </p>
+
+    <h2>You are my favourite little universe. ✨</h2>
+    <p class="signature">— Your Harry Potter ⚡</p>
+
+    <button onclick="restart()">Explore Again 🌌</button>
+  </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
